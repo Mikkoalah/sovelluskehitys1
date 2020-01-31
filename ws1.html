@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+
+<style media="screen">
+.completed {
+    text-decoration: line-through
+}
+
+li{cursor: pointer;}
+</style>
+
+</head>
+
+<body>
+    
+<div id="app">
+    <h1>{{tile}}</h1>
+
+    <ul> 
+     <li v-for="item in list" :class="{ completed: 
+         item.completed }" @click="item.completed=!item.completed"
+     >{{item.name}}</li> 
+    </ul>
+    
+<input type="text" name="" value="" v-model="newItem">
+<button type="button" name="button" v-on:click="list.push({name:newItem, completed:false})" > Lisää uusi  </button>
+<button type="button" name="button" v-on:click="list.pop()"> Poista viimeinen </button>
+
+
+
+
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="testi.js"></script>
+
+</body>
+
+</html>
